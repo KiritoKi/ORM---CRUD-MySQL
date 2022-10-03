@@ -1,0 +1,77 @@
+<%- include("head.ejs") -%>
+    <h4>Delete Master/details - Teacher Register?</h4>
+    <form action="/delete/teacher/<%= data.ID_teacher %>" method="post">
+        <!-- Table - Master -->
+        <div class="card-header">
+            <ul class="nav nav-pills w-100">
+                <li class="nav-pill active">
+                    <h5>Person Register</h5>
+                </li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label>Registration</label>
+            <input type="text" class="form-control form-control-sm" name="registration" value="<%= data.registration %>"
+                readonly="readonly">
+        </div>
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control form-control-sm" name="name" value="<%= data.name %>"
+                readonly="readonly">
+        </div>
+        <div class="form-group">
+            <label>Address</label>
+            <input type="text" class="form-control form-control-sm" name="address" value="<%= data.address %>"
+                readonly="readonly">
+        </div>
+        <div class="form-group">
+            <label>Birthday Date</label>
+            <input type="text" class="form-control form-control-sm" name="birthday_date"
+                value="<%= data.birthday_date %>" readonly="readonly">
+        </div>
+        <!-- Table - Details -->
+        <div class="card-header">
+            <ul class="nav nav-pills w-100">
+                <li class="nav-pill active">
+                    <h5>Teacher Register</h5>
+                </li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label>ID Teacher</label>
+            <input class="form-control" type="text" name="ID_student" value="<%= data.ID_teacher %>"
+                readonly="readonly" />
+            <div class="form-group">
+                <label>Graduation</label>
+                <input class="form-control" type="text" name="graduation" value="<%= data.graduation %>"
+                    readonly="readonly" />
+            </div>
+            <div class="form-group">
+                <label>Salary</label>
+                <input class="form-control" type="text" name="salary" value="<%= data.salary %>" readonly="readonly" />
+            </div>
+            <div class="form-group">
+                <label>ID Registration - Foreign Key</label>
+                <input class="form-control" type="text" name="FK" value="<%= data.ID_registration %>"
+                    readonly="readonly" />
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Delete Only Detail" class="btn btn-sm btn-dark" />
+                <a href="/" class="btn btn-outline-primary btn-sm">Return</a>
+            </div>
+
+    </form>
+
+    <div class="form-group">
+        <a class="btn btn-danger btn-sm"
+            onclick="return confirm( 'Are you sure to DELETE the Master record and ALL its related Details?' ); "
+            href="/deletePersonAll/teacher/<%= data.registration %>/<%= data.ID_teacher %>">Delete Master/Detail</a>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    </body>
+
+    </html>
