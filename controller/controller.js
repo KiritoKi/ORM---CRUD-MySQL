@@ -97,7 +97,7 @@ function selectTeacher(id_master, id_detail) {
                 if (err) {
                     reject(err);
                 }
-                console.log(result);
+                console.log("teste git");
                 resolve(result[0]);
             }
         );
