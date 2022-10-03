@@ -1,0 +1,124 @@
+<%- include("head.ejs"); %>
+
+    <body>
+        <h4>Teacher - Table</h4>
+        <div class="table-responsive-sm">
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th>Registration</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Birthday Date</th>
+                        <th>ID_Teacher</th>
+                        <th>Graduation</th>
+                        <th>Salary</th>
+                        <th class="d-print-none">
+                            <a class="btn btn-sm btn-success" href="/insertTeacher">New Register</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (const item of data_T) { %>
+                        <tr>
+                            <td>
+                                <%= item.registration %>
+                            </td>
+                            <td>
+                                <%= item.name %>
+                            </td>
+                            <td>
+                                <%= item.address %>
+                            </td>
+                            <td>
+                                <%= item.birthday_date %>
+                            </td>
+                            <th>
+                                <%= item.ID_teacher %>
+                            </th>
+                            <th>
+                                <%= item.graduation %>
+                            </th>
+                            <th>
+                                <%= item.salary %>
+                            </th>
+                            <td class="d-print-none">
+
+                                <a class="btn btn-sm btn-info"
+                                    href="/insertD/<%= item.registration %>/<%= item.ID_teacher %>">Insert Detail</a>
+                                <a class="btn btn-sm btn-warning"
+                                    href="/edit/teacher/<%= item.registration %>/<%= item.ID_teacher %>">Edit</a>
+                                <a class="btn btn-sm btn-danger"
+                                    href="/delete/teacher/<%= item.registration %>/<%= item.ID_teacher %>">Delete</a>
+                            </td>
+                        </tr>
+                        <%} %>
+                </tbody>
+                <!----------------- BREAK TABLE ------------------->
+                <thead>
+
+                    <tr>
+                        <td>
+                            <h4>Student - Table</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Registration</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Birthday Date</th>
+                        <th>ID_Student</th>
+                        <th>Course</th>
+                        <th>Registration_Student</th>
+                        <th class="d-print-none">
+                            <a class="btn btn-sm btn-success" href="/insertStudent">New Register</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (const item of data_S) { %>
+                        <tr>
+                            <td>
+                                <%= item.registration %>
+                            </td>
+                            <td>
+                                <%= item.name %>
+                            </td>
+                            <td>
+                                <%= item.address %>
+                            </td>
+                            <td>
+                                <%= item.birthday_date %>
+                            </td>
+                            <th>
+                                <%= item.ID_student %>
+                            </th>
+                            <th>
+                                <%= item.course %>
+                            </th>
+                            <th>
+                                <%= item.registration_student %>
+                            </th>
+                            <td class="d-print-none">
+
+                                <a class="btn btn-sm btn-info"
+                                    href="/insertD/<%= item.registration %>/<%= item.ID_student %>">Insert Detail</a>
+                                <a class="btn btn-sm btn-warning"
+                                    href="/edit/student/<%= item.registration %>/<%= item.ID_student %>">Edit</a>
+                                <a class="btn btn-sm btn-danger"
+                                    href="/delete/student/<%= item.registration %>/<%= item.ID_student %>">Delete</a>
+                            </td>
+                        </tr>
+                        <%} %>
+                </tbody>
+            </table>
+
+
+
+        </div>
+        </div>
+        </div>
+        </div>
+    </body>
+
+    </html>

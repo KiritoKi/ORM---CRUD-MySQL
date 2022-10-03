@@ -1,0 +1,60 @@
+<%- include("head.ejs") -%>
+    <div>
+        <div class="card-header">
+            <h4>Registro da tabela mestre</h4>
+            <div class="form-group">
+                <label>ID_mestre</label>
+                <input type="text" class="form-control form-control-sm" name="ID_mestre" value="<%= data.ID_mestre %>"
+                    readonly="readonly">
+            </div>
+            <div class="form-group">
+                <label>Campo_mestre1</label>
+                <input type="text" class="form-control form-control-sm" name="Campo_mestre1"
+                    value="<%= dado.Campo_mestre1 %>" readonly="readonly">
+            </div>
+            <div class="form-group">
+                <label>Campo_mestre2</label>
+                <input type="text" class="form-control form-control-sm" name="Campo_mestre2"
+                    value="<%= dado.Campo_mestre2 %>" readonly="readonly">
+            </div>
+        </div>
+    </div>
+    <!-- Atualizar dados da tabela Publicacao -->
+    <div class="card-header">
+        <ul class="nav nav-pills w-100">
+            <li class="nav-pill active">
+                <h4>Incluir na Tabela de Detalhes</h4>
+            </li>
+        </ul>
+        <div>
+            <!-- Form para inclusao de nova regisgro Detalhes para Mestre -->
+            <div class="card-body">
+                <!-- <form  action="/inserirDetalhe" method="post"> -->
+                <form action="/inserirD/<%= dado.ID_mestre %>/<%= dado.ID_detalhe %>" method="post">
+                    <table class="table table-striped table-hover table-active">
+                        <tr>
+                            <td colspan="2">Detalhes relaionado com a tabela Mestre</td>
+                        </tr>
+                        <tr>
+                            <td>Atributo_detalhe1</td>
+                            <td><input class="form-control" type="text" name="Atributo_detalhe1"
+                                    value="<%= Atributo_detalhe1 %>" /></td>
+                        </tr>
+                        <tr>
+                            <td>Atributo_detalhe2</td>
+                            <td><input class="form-control" type="text" name="Atributo_detalhe2"
+                                    value="<%= Atributo_detalhe2 %>" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input class="btn btn-primary" type="submit" name="btIncuirPub" value="Inserir" />
+                                <a href="/" class="btn btn-outline-primary btn-sm">Voltar</a>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+            </body>
+
+            </html>

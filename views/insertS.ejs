@@ -1,0 +1,40 @@
+<%- include('head.ejs') %>
+
+    <body>
+        <form action="/insertStudent" method="post">
+            <!-- Dados para inserir tabela mestre  -->
+            <h4>Master Table</h4>
+            <div>
+                <label for="">Name</label>
+                <input class="form-control" type="text" name="name" value="<%=data.name %>">
+            </div>
+            <div>
+                <label for="">Address</label>
+                <input class="form-control" type="text" name="address" value="<%=data.address %>">
+            </div>
+            <div>
+                <label for="">Birthday Date</label>
+                <input class="form-control" type="text" name="birthdaydate" value="<%=data.birthday_date %>">
+            </div>
+            <br>
+            <!-- Dados para inserir tabela detalhes  -->
+            <h4>Detail Table Related to M-Table</h4>
+            <div>
+                <label for="">Course</label>
+                <input class="form-control" type="text" name="detail_attribute1" value="<%=data.detail_attribute1 %>">
+            </div>
+            <div>
+                <label for="">Student's Registration</label>
+                <input class="form-control" type="text" name="detail_attribute2" value="<%=data.detail_attribute2 %>">
+            </div>
+            <br>
+            <input class="btn btn-primary" type="submit" value="INSERT" />
+            <a href="/" class="btn btn-outline-primary btn-sm">Return</a>
+        </form>
+
+        </div>
+        </div>
+        </div>
+    </body>
+
+    </html>

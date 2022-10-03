@@ -1,0 +1,56 @@
+<%- include('head.ejs') %>
+
+    <body>
+        <div class="card-header">
+            <ul class="nav nav-pills w-100">
+                <li class="nav-pill active">
+                    <h5>Edit Person Register</h5>
+                </li>
+            </ul>
+        </div>
+        <form action="/edit/student/<%=data.registration%>/<%=data.ID_student%>" method="post">
+            <!-- Data Person - Master Table -->
+            <div class="form-group">
+                <label for="">Name</label>
+                <input class="form-control  form-control-sm" type="text" name="name" value="<%=data.name %>">
+            </div class="form-group">
+            <div>
+                <label for="">Address</label>
+                <input class="form-control  form-control-sm" type="text" name="address" value="<%=data.address %>">
+            </div>
+            <div class="form-group">
+                <label for="">Birthday Date</label>
+                <input class="form-control  form-control-sm" type="text" name="birthdaydate"
+                    value="<%=data.birthday_date %>">
+            </div>
+
+            <!-- Data Student - Detail Table -->
+            <div class="card-header">
+                <ul class="nav nav-pills w-100">
+                    <li class="nav-pill active">
+                        <h5>Edit Detail Register</h5>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label>Course</label>
+                <input class="form-control" type="text" name="course" value="<%= data.course %>" />
+            </div>
+            <div class="form-group">
+                <label>Student's Registration</label>
+                <input class="form-control" type="text" name="registration_student"
+                    value="<%= data.registration_student %>" />
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" class="btn btn-info" value="EDIT">
+                <a href="/" class="btn btn-outline-primary btn-sm">Return</a>
+            </div>
+        </form>
+
+        </div>
+        </div>
+        </div>
+    </body>
+
+    </html>
