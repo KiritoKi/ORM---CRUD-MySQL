@@ -39,8 +39,13 @@ app.post('/insertTeacher', async function (request, response) {
 
     const teacher = new Teacher(
         0,
+<<<<<<< HEAD
         request.body.detail_attribute1,
         request.body.detail_attribute2,
+=======
+        request.body.graduation,
+        request.body.salary,
+>>>>>>> master
         0
     );
     controller.insertTeacher(teacher, FK); //Send object to insertion
@@ -66,8 +71,13 @@ app.post('/insertStudent', async function (request, response) {
 
     const student = new Student(
         0,
+<<<<<<< HEAD
         request.body.detail_attribute1,
         request.body.detail_attribute2,
+=======
+        request.body.course,
+        request.body.registration_student,
+>>>>>>> master
         0
     );
     controller.insertStudent(student, FK); //Send object to insertion
@@ -201,7 +211,61 @@ app.get('/deletePersonAll/teacher/:id_m/:id_d', function (request, response) {
     controller.deletePerson(idm);
     response.redirect("/");
 });
+<<<<<<< HEAD
 
+=======
+//localhost:3000/insertD/student/:id_m/:id_d
+//GET
+app.get('/insertD/student/:id_m/:id_d', async function (request, response) {
+    let idm = request.params.id_m;
+    let idd = request.params.id_d;
+    try {
+        var result = await controller.selectStudent(idm, idd);
+    } catch (err) {
+        console.error('Erro = ', err);
+    }
+    response.render("insertD-S.ejs", { data: result });
+
+});
+//localhost:3000/insertD/teacher/:id_m/:id_d
+//GET
+app.get('/insertD/teacher/:id_m/:id_d', async function (request, response) {
+    let idm = request.params.id_m;
+    let idd = request.params.id_d;
+    try {
+        var result = await controller.selectTeacher(idm, idd);
+    } catch (err) {
+        console.error('Erro = ', err);
+    }
+    response.render("insertD-T.ejs", { data: result });
+
+});
+//POST
+app.post('/insertD/student/:id_m/:id_d', function (request, response) {
+
+    const student = new Student(
+        request.params.id_d,
+        request.body.course,
+        request.body.registration_student,
+        request.params.id_m
+    );
+    controller.editStudent(student);
+    response.redirect("/");
+
+});
+app.post('/insertD/teacher/:id_m/:id_d', function (request, response) {
+
+    const teacher = new Teacher(
+        request.params.id_d,
+        request.body.graduation,
+        request.body.salary,
+        request.params.id_m
+    );
+    controller.editTeacher(teacher);
+    response.redirect("/");
+
+});
+>>>>>>> master
 
 app.listen(3000, () => {
     console.log('SERVER IS ON, ACCESS: http://localhost:3000');

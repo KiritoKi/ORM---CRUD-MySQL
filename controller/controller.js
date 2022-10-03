@@ -84,7 +84,7 @@ function insertStudent(student, fk) {
     );
 }
 
-//called by GET EDIT TEACHER
+//called by GET EDIT TEACHER & GET INSERT DETAILS
 function selectTeacher(id_master, id_detail) {
     return new Promise((resolve, reject) => {
         let sql = "SELECT * FROM Person, Teacher";
@@ -97,14 +97,14 @@ function selectTeacher(id_master, id_detail) {
                 if (err) {
                     reject(err);
                 }
-                console.log(result);
+                console.log("teste git");
                 resolve(result[0]);
             }
         );
     });
 }
 
-//called by GET EDIT STUDENT
+//called by GET EDIT STUDENT & GET INSERT DETAILS
 function selectStudent(id_master, id_detail) {
     return new Promise((resolve, reject) => {
         let sql = "SELECT * FROM Person, Student";
