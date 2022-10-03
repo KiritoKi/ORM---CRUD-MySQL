@@ -1,4 +1,4 @@
-CREATE DATABASE db;
+CREATE DATABASE db_faculdade;
 
 CREATE TABLE Person(
 	registration integer NOT NULL AUTO_INCREMENT,
