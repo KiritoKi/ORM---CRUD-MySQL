@@ -33,8 +33,3 @@ ALTER TABLE Student ADD CONSTRAINT ID_person_stu FOREIGN KEY (ID_registration)
 REFERENCES Person (registration) MATCH SIMPLE
 ON DELETE CASCADE ON UPDATE CASCADE;
 
-SET @count =0;
-
-UPDATE Person SET Person.registration = @count:=@count+1;
-
-
