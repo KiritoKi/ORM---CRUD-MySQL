@@ -84,6 +84,18 @@ function insertStudent(student, fk) {
     );
 }
 
+function selectTeacher(id_master, id_detail) {
+    return new Promise((resolve, reject) => {
+
+        let sql = "SELECT * FROM Person, Teacher;
+        sql += " WHERE (registration=ID_registration)";
+        sql += " and (registration=?) and (ID_teacher=?);"
+        const params = [id_master, id_detail];
+
+        db.query(sql. )
+    });
+}
+
 //called by GET EDIT TEACHER & GET INSERT DETAILS
 function selectTeacher(id_master, id_detail) {
     return new Promise((resolve, reject) => {
