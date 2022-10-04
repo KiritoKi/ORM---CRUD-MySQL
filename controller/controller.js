@@ -90,7 +90,7 @@ function selectTeacher(id_master, id_detail) {
         let sql = "SELECT * FROM Person, Teacher";
         sql += " WHERE (registration=ID_registration)";
         sql += " and (registration=?) and (ID_teacher=?);";
-        const params = [id_master, id_detail;
+        const params = [id_master, id_detail];
 
         db.query(sql, params,
             function (err, result, fields) {
