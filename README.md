@@ -18,10 +18,10 @@
 * Install the dependencies and start the server:
 
 ```
-3. npm init -y
-4. npm install mysql
-5. npm install express
-6. npm install ejs
+3. npm install mysql
+4. npm install express
+5. npm install ejs
+6. npm run start
 ```
 
 <h4 align="center"> 
