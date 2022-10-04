@@ -35,6 +35,7 @@
 ### Connection DATABASE (Important!)
 
 * Modify the `User` and `Password` variables in the `controller/db.js` file according to your database 
+	
 	Warning! If your database name is different from `db_faculdades`, change it `here`
 
 <h4 align="center"> 
