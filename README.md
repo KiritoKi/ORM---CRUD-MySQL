@@ -24,19 +24,6 @@
 6. npm run start
 ```
 
-<h4 align="center"> 
-	🚧  Input validation 🚀 Is Coming...  🚧
-</h4>
-
-### Features
-
-- [x] Master Table Registration - Person
-- [x] Detail Table Registration - Teacher/Student
-- [x] Delete Only Detail
-- [x] Delete Detail and Master
-- [x] Edit Tables
-- [ ] input validation
-
 ### MySQL
 
 * Acess the official MySQL Page, Install MySQL and configure a database to use Node
@@ -49,6 +36,19 @@
 
 * Modify the `User` and `Password` variables in the `controller/db.js` file according to your database 
 	Warning! If your database name is different from `db_faculdades`, change it `here`
+
+<h4 align="center"> 
+	🚧  Input validation 🚀 Is Coming...  🚧
+</h4>
+
+### Features
+
+- [x] Master Table Registration - Person
+- [x] Detail Table Registration - Teacher/Student
+- [x] Delete Only Detail
+- [x] Delete Detail and Master
+- [x] Edit Tables
+- [ ] input validation
 
 
 
