@@ -37,5 +37,19 @@
 - [x] Edit Tables
 - [ ] input validation
 
+### MySQL
+
+* Acess the official MySQL Page, Install MySQL and configure a database to use Node
+
+<a href=“https://www.mysql.com/downloads/“>MySQL - Download</a>
+
+* Starts your MySQL Server and execute the query at `createdb.sql` !Warning
+
+### Connection DATABASE (Important!)
+
+* Modify the `User` and `Password` variables in the `controller/db.js` file according to your database 
+	Warning! If your database name is different from `db_faculdades`, change it `here`
+
+
 
 
