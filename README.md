@@ -28,7 +28,7 @@
 
 * Acess the official MySQL Page, Install MySQL and configure a database to use Node
 
-<a href=“https://www.mysql.com/downloads/“>MySQL - Download</a>
+[MySQL - Download](https://www.mysql.com/downloads/)
 
 * Starts your MySQL Server and execute the query at `createdb.sql` !Warning
 
