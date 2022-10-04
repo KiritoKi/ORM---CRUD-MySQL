@@ -38,11 +38,11 @@
 	
 	Warning! If your database name is different from `db_faculdades`, change it `here`
 
+## Features
+
 <h4 align="center"> 
 	🚧  Input validation 🚀 Is Coming...  🚧
 </h4>
-
-### Features
 
 - [x] Master Table Registration - Person
 - [x] Detail Table Registration - Teacher/Student
