@@ -39,13 +39,8 @@ app.post('/insertTeacher', async function (request, response) {
 
     const teacher = new Teacher(
         0,
-<<<<<<< HEAD
-        request.body.detail_attribute1,
-        request.body.detail_attribute2,
-=======
         request.body.graduation,
         request.body.salary,
->>>>>>> master
         0
     );
     controller.insertTeacher(teacher, FK); //Send object to insertion
@@ -71,13 +66,8 @@ app.post('/insertStudent', async function (request, response) {
 
     const student = new Student(
         0,
-<<<<<<< HEAD
-        request.body.detail_attribute1,
-        request.body.detail_attribute2,
-=======
         request.body.course,
         request.body.registration_student,
->>>>>>> master
         0
     );
     controller.insertStudent(student, FK); //Send object to insertion
@@ -211,9 +201,6 @@ app.get('/deletePersonAll/teacher/:id_m/:id_d', function (request, response) {
     controller.deletePerson(idm);
     response.redirect("/");
 });
-<<<<<<< HEAD
-
-=======
 //localhost:3000/insertD/student/:id_m/:id_d
 //GET
 app.get('/insertD/student/:id_m/:id_d', async function (request, response) {
@@ -265,7 +252,6 @@ app.post('/insertD/teacher/:id_m/:id_d', function (request, response) {
     response.redirect("/");
 
 });
->>>>>>> master
 
 app.listen(3000, () => {
     console.log('SERVER IS ON, ACCESS: http://localhost:3000');
